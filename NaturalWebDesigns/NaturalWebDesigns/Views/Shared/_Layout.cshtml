@@ -1,44 +1,129 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- Title -->
+    <title>Natural Web Designs by morganwe.ca</title>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="~/Theme/assets/vendor/bootstrap/bootstrap.min.css">
+    <!-- CSS Global Icons -->
+    <link rel="stylesheet" href="~/Theme/assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/icon-etlinefont/style.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/icon-line-pro/style.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/icon-hs/style.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/animate.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/typedjs/typed.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor/hamburgers/hamburgers.min.css">
+    <!-- CSS Unify -->
+    <link rel="stylesheet" href="~/Theme/assets/css/unify-core.css">
+    <link rel="stylesheet" href="~/Theme/assets/css/unify-components.css">
+    <link rel="stylesheet" href="~/Theme/assets/css/unify-globals.css">
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="~/Theme/assets/css/custom.css">
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
+    @Html.Partial("_HeaderToolBar")
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
+    @Html.Partial("_FooterToolBar")
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+
+    <div class="u-outer-spaces-helper"></div>
+
+    <!-- JS Global Compulsory -->
+    <script src="~/Theme/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Theme/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="~/Theme/assets/vendor/popper.min.js"></script>
+    <script src="~/Theme/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="~/Theme/assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="~/Theme/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+    <script src="~/Theme/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+    <script src="~/Theme/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+    <script src="~/Theme/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+    <script src="~/Theme/assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="~/Theme/assets/vendor/typedjs/typed.min.js"></script>
+    <!-- JS Unify -->
+    <script src="~/Theme/assets/js/hs.core.js"></script>
+    <script src="~/Theme/assets/js/components/hs.carousel.js"></script>
+    <script src="~/Theme/assets/js/components/hs.header.js"></script>
+    <script src="~/Theme/assets/js/helpers/hs.hamburgers.js"></script>
+    <script src="~/Theme/assets/js/components/hs.tabs.js"></script>
+    <script src="~/Theme/assets/js/components/hs.popup.js"></script>
+    <script src="~/Theme/assets/js/components/text-animation/hs.text-slideshow.js"></script>
+    <script src="~/Theme/assets/js/components/hs.go-to.js"></script>
+    <!-- JS Customization -->
+    <script src="~/Theme/assets/js/custom.js"></script>
+    <!-- JS Plugins Init. -->
+    <script>
+        $(document).on('ready', function () {
+            // initialization of carousel
+            $.HSCore.components.HSCarousel.init('.js-carousel');
+
+            // initialization of tabs
+            $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+            // initialization of popups
+            $.HSCore.components.HSPopup.init('.js-fancybox');
+
+            // initialization of go to
+            $.HSCore.components.HSGoTo.init('.js-go-to');
+
+            // initialization of text animation (typing)
+            $(".u-text-animation.u-text-animation--typing").typed({
+                strings: [
+                    "an awesome template",
+                    "perfect template",
+                    "just like a boss"
+                ],
+                typeSpeed: 60,
+                loop: true,
+                backDelay: 1500
+            });
+        });
+
+        $(window).on('load', function () {
+            // initialization of header
+            $.HSCore.components.HSHeader.init($('#js-header'));
+            $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+            // initialization of HSMegaMenu component
+            $('.js-mega-menu').HSMegaMenu({
+                event: 'hover',
+                pageContainer: $('.container'),
+                breakpoint: 991
+            });
+        });
+
+        $(window).on('resize', function () {
+            setTimeout(function () {
+                $.HSCore.components.HSTabs.init('[role="tablist"]');
+            }, 200);
+        });
+    </script>
 </body>
 </html>
