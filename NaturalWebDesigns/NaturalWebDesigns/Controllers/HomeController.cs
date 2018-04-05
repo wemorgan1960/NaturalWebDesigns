@@ -15,7 +15,21 @@ namespace NaturalWebDesigns.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "About";
+
+            return View();
+        }
+
+        public ActionResult Services()
+        {
+            ViewBag.Message = "Our Services";
+
+            return View();
+        }
+
+        public ActionResult Portofolio()
+        {
+            ViewBag.Message = "Our Portofolio.";
 
             return View();
         }
