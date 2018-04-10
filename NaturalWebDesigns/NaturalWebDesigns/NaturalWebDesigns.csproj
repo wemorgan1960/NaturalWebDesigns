@@ -209,6 +209,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EmailFormModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -917,6 +918,8 @@
     <Content Include="Theme\assets\img-temp\350x230\img6.jpg" />
     <Content Include="Theme\assets\img-temp\350x500\img1.jpg" />
     <Content Include="Theme\assets\img-temp\350x600\img1.png" />
+    <Content Include="Theme\assets\img-temp\400x270\AskYourMechanicDon.png" />
+    <Content Include="Theme\assets\img-temp\400x270\BackCountryFreedom.png" />
     <Content Include="Theme\assets\img-temp\400x270\img1.jpg" />
     <Content Include="Theme\assets\img-temp\400x270\img10.jpg" />
     <Content Include="Theme\assets\img-temp\400x270\img11.jpg" />
@@ -945,6 +948,7 @@
     <Content Include="Theme\assets\img-temp\400x270\img7.jpg" />
     <Content Include="Theme\assets\img-temp\400x270\img8.jpg" />
     <Content Include="Theme\assets\img-temp\400x270\img9.jpg" />
+    <Content Include="Theme\assets\img-temp\400x270\MyRockies.png" />
     <Content Include="Theme\assets\img-temp\400x400\img1.png" />
     <Content Include="Theme\assets\img-temp\400x450\img1.jpg" />
     <Content Include="Theme\assets\img-temp\400x450\img2.jpg" />
@@ -1376,6 +1380,7 @@
     <Content Include="Theme\assets\img-temp\logos\img4.png" />
     <Content Include="Theme\assets\img-temp\logos\img5.png" />
     <Content Include="Theme\assets\img-temp\logos\img6.png" />
+    <Content Include="Theme\assets\img-temp\logos\morganwelog.png" />
     <Content Include="Theme\assets\img-temp\unify-preview\img1.jpg" />
     <Content Include="Theme\assets\img-temp\unify-preview\img10.jpg" />
     <Content Include="Theme\assets\img-temp\unify-preview\img11.jpg" />

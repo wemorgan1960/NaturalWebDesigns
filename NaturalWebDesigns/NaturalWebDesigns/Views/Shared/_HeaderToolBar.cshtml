@@ -18,6 +18,19 @@
                 </a>
                 <!-- End Logo -->
                 <!-- Navigation -->
+                <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
+                    <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
+                        <!-- Home -->
+                        <li class="dropdown-item hs-has-sub-menu ">
+                            <a id="nav-link-pages" class="nav-link g-py-7 g-px-0" href="@Url.Action("Index","Home")" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-pages">Home</a>
+                        <li class="dropdown-item hs-has-sub-menu ">
+                            <a id="nav-link-pages" class="nav-link g-py-7 g-px-0" href="@Url.Action("Services","Home")" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-pages">Services</a>
+                        <li class="dropdown-item hs-has-sub-menu ">
+                            <a id="nav-link-pages" class="nav-link g-py-7 g-px-0" href="@Url.Action("About","Home")" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-pages">About</a>
+                        </li>
+                        <!-- End Pages - Services -->
+                    </ul>
+                </div>
                 <!-- End Navigation -->
                 <div class="d-inline-block g-hidden-xs-down g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
                     <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="@Url.Action("Contact","Home")" target="_blank">Contact us Now</a>

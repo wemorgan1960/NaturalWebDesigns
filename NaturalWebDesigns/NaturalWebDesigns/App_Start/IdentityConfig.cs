@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -19,6 +21,23 @@ namespace NaturalWebDesigns
         public Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
+            var subject = message.Subject;
+            var body = message.Body;
+            var fromAddress = "admin@naturalwebdesigns.com";
+            var toAddress = message.Destination;
+
+
+            var smtp = new SmtpClient();
+            {
+                smtp.Host = "smtp.askyourmechanicdon.com";
+                smtp.Port = 587;
+                smtp.EnableSsl = false;
+                smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
+                smtp.Credentials = new NetworkCredential("admin@naturalwebdesigns.com", "fgEmnz*hk8");
+                smtp.Timeout = 20000;
+            }
+
+            smtp.Send(fromAddress, toAddress, subject, body);
             return Task.FromResult(0);
         }
     }
